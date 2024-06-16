@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <title>Game Instructions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #instructions {
+      width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Face Landmarker</title>
+
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</head>
+<body>
+<main>
+
+  <div id="instructions">
+    <h1>Welcome to the Game!</h1>
+    <p>This game uses your webcam to detect your emotions and control the paddle in the game.</p>
+    <ul>
+      <li>If you're <strong>happy</strong>, the paddle will move to the <strong>left</strong>.</li>
+      <li>If you're <strong>sad</strong>, the paddle will move to the <strong>right</strong>.</li>
+      <li>If your emotion is <strong>normal</strong>, the paddle will <strong>stay still</strong>.</li>
+    </ul>
+
+  </div>
+
+
+
+  <section id="demos" class="invisible">
+
+
+
+
+    <div id="liveView" class="videoView">
+      <button id="webcamButton" class="mdc-button mdc-button--raised">
+        <span class="mdc-button__ripple"></span>
+        <span class="mdc-button__label">ENABLE WEBCAM</span>
+      </button>
+      <div style="position: relative;">
+        <video id="webcam" style="position: absolute" autoplay playsinline></video>
+        <canvas class="output_canvas" id="output_canvas" style="position: absolute; left: 0px; top: 0px;"></canvas>
+      </div>
+    </div>
+    <div class="blend-shapes">
+      <ul class="blend-shapes-list" id="video-blend-shapes"></ul>
+    </div>
+
+    <div id="gameCanvas-container">
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+    <div id="header-container">
+      <h1>Brick Breaker</h1>
+    </div>
+
+
+
+  </section>
+</main>
+
+<!-- partial -->
+<script type="module" src="game.js"></script>
+<!--  <script type="module" src="app.js"></script>-->
+
+
+</body>
+</html>
